@@ -22,6 +22,4 @@ if (process.env.NODE_ENV === 'dev') {
     urlDB = process.env.MONGO_URI;
 }
 
-// mongodb + srv: //kay:myRealPassword@cluster0.mongodb.net/admin
-
 process.env.URLDB = urlDB;
