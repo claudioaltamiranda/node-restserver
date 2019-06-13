@@ -15,13 +15,11 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // ===========================
 
 let urlDB;
-let usuario = 'cafe-usuario';
-let password = 'l12asup';
 
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
-    urlDB = `mongodb+srv://${usuario}:${password}@cluster0-u37ql.mongodb.net/cafe`;
+    urlDB = process.env.MONGO_URI;
 }
 
 // mongodb + srv: //kay:myRealPassword@cluster0.mongodb.net/admin
