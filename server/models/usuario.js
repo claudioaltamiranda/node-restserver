@@ -17,7 +17,7 @@ let usuarioSchema = new Schema({
     email: {
         type: String,
         required: [true, 'El correo es necesario'],
-        unique: true
+        unique: false // Para mi esta mal la validaciòn del email
     },
     password: {
         type: String,
